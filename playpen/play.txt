@@ -1,0 +1,99 @@
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+kpalsup@haupia:~$ git config --global user.name "Katrina P. Alsup"
+kpalsup@haupia:~$ git config --global user.email kpalsup@nps.edu
+kpalsup@haupia:~$ cd~
+No command 'cd~' found, did you mean:
+ Command 'cdw' from package 'cdw' (universe)
+ Command 'cdp' from package 'irpas' (multiverse)
+ Command 'cd5' from package 'cd5' (universe)
+ Command 'cdi' from package 'cdo' (universe)
+ Command 'cde' from package 'cde' (universe)
+ Command 'cdo' from package 'cdo' (universe)
+ Command 'cdb' from package 'tinycdb' (main)
+ Command 'cdv' from package 'codeville' (universe)
+cd~: command not found
+kpalsup@haupia:~$ cd ~
+kpalsup@haupia:~$ mkdir sandbox
+kpalsup@haupia:~$ cd ./sandbox
+kpalsup@haupia:~/sandbox$ ls
+kpalsup@haupia:~/sandbox$ mkdir dir1
+kpalsup@haupia:~/sandbox$ ls
+dir1
+kpalsup@haupia:~/sandbox$ ../
+bash: ../: Is a directory
+kpalsup@haupia:~/sandbox$ ..
+..: command not found
+kpalsup@haupia:~/sandbox$ .. /
+..: command not found
+kpalsup@haupia:~/sandbox$ cd ..
+kpalsup@haupia:~$ ls
+Desktop    Downloads  Pictures  sandbox    Videos
+Documents  Music      Public    Templates
+kpalsup@haupia:~$ cd sandbox/
+kpalsup@haupia:~/sandbox$ ls
+dir1
+kpalsup@haupia:~/sandbox$ mkdir dir2
+kpalsup@haupia:~/sandbox$ ls
+dir1  dir2
+kpalsup@haupia:~/sandbox$ gedit commands.txt
+kpalsup@haupia:~/sandbox$ ls
+dir1  dir2
+kpalsup@haupia:~/sandbox$ nano commands.txt
+kpalsup@haupia:~/sandbox$ ls
+commands.txt  dir1  dir2
+kpalsup@haupia:~/sandbox$ cd dir1
+kpalsup@haupia:~/sandbox/dir1$ nano file1.txt
+kpalsup@haupia:~/sandbox/dir1$ cd .
+kpalsup@haupia:~/sandbox/dir1$ cd .. 
+kpalsup@haupia:~/sandbox$ cd ../
+kpalsup@haupia:~$ cd sandbox
+kpalsup@haupia:~/sandbox$ cd dir2
+kpalsup@haupia:~/sandbox/dir2$ nano file2.txt
+kpalsup@haupia:~/sandbox/dir2$ ls
+file2.txt
+kpalsup@haupia:~/sandbox/dir2$ cd ..
+kpalsup@haupia:~/sandbox$ ls
+commands.txt  dir1  dir2
+kpalsup@haupia:~/sandbox$ cd ..
+kpalsup@haupia:~$ cp sandbox
+cp: missing destination file operand after 'sandbox'
+Try 'cp --help' for more information.
+kpalsup@haupia:~$ ls
+Desktop    Downloads  Pictures  sandbox    Videos
+Documents  Music      Public    Templates
+kpalsup@haupia:~$ cp sandbox .
+cp: omitting directory 'sandbox'
+kpalsup@haupia:~$ ls
+Desktop    Downloads  Pictures  sandbox    Videos
+Documents  Music      Public    Templates
+kpalsup@haupia:~$ cd sandbox
+kpalsup@haupia:~/sandbox$ ls
+commands.txt  dir1  dir2
+kpalsup@haupia:~/sandbox$ cd ..
+kpalsup@haupia:~$ cp -R sandbox playpen
+kpalsup@haupia:~$ ls
+Desktop    Downloads  Pictures  Public   Templates
+Documents  Music      playpen   sandbox  Videos
+kpalsup@haupia:~$ cd playpen
+kpalsup@haupia:~/playpen$ ls
+commands.txt  dir1  dir2
+kpalsup@haupia:~/playpen$ mv commands.txt play.txt
+kpalsup@haupia:~/playpen$ ls
+dir1  dir2  play.txt
+kpalsup@haupia:~/playpen$ mv dir1 folder1
+kpalsup@haupia:~/playpen$ mv dir2 folder2
+kpalsup@haupia:~/playpen$ ls
+folder1  folder2  play.txt
+kpalsup@haupia:~/playpen$ gi
+gifmaker            gimp-console        git
+gifmaker.py         gimp-console-2.8    git-receive-pack
+giftopnm            ginstall-info       git-shell
+gimp                gio-querymodules    git-upload-archive
+gimp-2.8            gipddecode          git-upload-pack
+kpalsup@haupia:~/playpen$ gedit play.txt
+^C
+kpalsup@haupia:~/playpen$ gedit play.txt
+
+
